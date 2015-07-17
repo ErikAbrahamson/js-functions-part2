@@ -34,3 +34,15 @@ function longestWord(string) {
     return word;
 }
 console.log(longestWord(string));
+
+//3
+
+//4
+function fac(n) {
+  if (n < 2) {
+    return 1;
+  }
+  else {
+    return n * fac(n - 1);
+  }
+}
