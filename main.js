@@ -8,30 +8,28 @@ var people = [
     ];
 
 function oldestPerson(array) {
-    var oldest = array[0];
-
-    for (var i = 0; i < array.length; i++ ) {
-        console.log(array[i]['name'], array[i]['age']);
-        if (oldest.age < array[i]['age']) {
-            oldest = array[i];
-        }
+  var oldest = array[0];
+  for (var i = 0; i < array.length; i++ ) {
+    console.log(array[i]['name'], array[i]['age']);
+    if (oldest.age < array[i]['age']) {
+      oldest = array[i];
     }
-    return oldest.name;
+  }
+  return oldest.name;
 }
 
 //2
-var string = "This is my string.";
 function longestWord(string) {
-    var array = string.split(' ');
-    var longest = 0;
-    var word = 0;
-    array.forEach(function(array) {
-        if (longest < array.length) {
-            longest = array.length;
-            word = array;
-        }
-    });
-    return word;
+  var array = string.split(' ');
+  var start = array[0].length;
+  var longest = null;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].length > start) {
+      start = array[i].length;
+      longest = array[i];
+    }
+  }
+  return longest;
 }
 
 //3
