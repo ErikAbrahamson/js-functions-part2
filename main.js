@@ -8,7 +8,7 @@ var people = [
     ];
 
 function oldestPerson(array) {
-    var oldest = people[0];
+    var oldest = array[0];
 
     for (var i = 0; i < array.length; i++ ) {
         console.log(array[i]['name'], array[i]['age']);
@@ -33,16 +33,14 @@ function longestWord(string) {
     });
     return word;
 }
-console.log(longestWord(string));
 
 //3
 
 //4
-function fac(n) {
-  if (n < 2) {
+function factorial(number) {
+  if (number < 2) {
     return 1;
-  }
-  else {
-    return n * fac(n - 1);
+  } else {
+    return number * factorial(number - 1);
   }
 }
