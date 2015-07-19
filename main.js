@@ -33,6 +33,23 @@ function longestWord(string) {
 }
 
 //3
+function longestWord(string) {
+  var array = string.split(' ');
+  var start = array[0].length;
+  var longest = null;
+  for (var i = 0; i < array.length; i++) {
+    for (var y = 0; y < array[i].length; y++) {
+      if (array[i][y] === '.') {
+        array[i][y].replace(/\./gi, '');
+      }
+    }
+    if (array[i].length > start) {
+      start = array[i].length;
+      longest = array[i];
+    }
+  }
+  return longest.replace(/\./gi, '');
+}
 
 //4
 function factorial(number) {
